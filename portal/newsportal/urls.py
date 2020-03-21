@@ -6,7 +6,7 @@ from .import views
 
 urlpatterns = [
     path('create',views.create_category, name='create_category'),
-path('create',views.list_category, name='list_category'),
-path('create',views.delete_category, name='delete_category'),
-path('create',views.edit_category, name='edit_category')
+    path('list',views.list_category, name='list_category'),
+    path('<int:id>/delete',views.delete_category, name='delete_category'),
+    path('<int:id>/edit',views.edit_category, name='edit_category')
 ]

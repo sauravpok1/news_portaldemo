@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home),
     path('login/', views.signin, name='signin'),
+    path('signout/', views.signout, name='signout'),
     path('backend/dashboard/', views.dashboard, name='dashboard'),
     path('backend/category/',include('newsportal.urls'))
 

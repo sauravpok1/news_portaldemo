@@ -1,5 +1,5 @@
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 
 
@@ -23,3 +23,8 @@ def signin(request):
 
 def dashboard(request):
     return render(request,'backend/dashboard.html')
+
+
+def signout(request):
+    logout(request)
+    return redirect('signin')
