@@ -1,0 +1,58 @@
+{% extends "backend/base.html" %}
+{% block title %}
+<title>Edit of Category | Admin Panel</title>
+{% endblock %}
+{% block content %}
+<!-- start: Content -->
+<div id="content">
+        <div class="panel box-shadow-none content-header">
+          <div class="panel-body">
+            <div class="col-md-12">
+                <h4 class="animated fadeInLeft">
+                    Category <span class="fa-angle-right fa"></span> Edit
+                    <a href="{% url 'category' %}" class="btn btn-3d btn-primary"><span class="fa fa-list"></span> List</a>
+                    <a href="{% url 'create_category' %}" class="btn btn-3d btn-primary"><span class="fa fa-plus"></span> Create</a>
+
+                </h4>
+            </div>
+          </div>
+        </div>
+        <div class="form-element">
+          <div class="col-md-12 padding-0">
+            <div class="col-md-12">
+              <div class="panel form-element-padding">
+                <div class="panel-heading">
+                 <h4>Category Management</h4>
+                </div>
+                 <div class="panel-body" style="padding-bottom:30px;">
+                  <div class="col-md-12">
+                    <form action="" method="POST" id="form" novalidate="">
+                        {% csrf_token %}
+                        {{forms.as_p}}
+                      
+                        <div class="form-group">
+                            <div class="col-sm-2">
+                            </div>
+                            <div class="col-sm-10">
+                            <input type="submit" class="btn ripple-infinite  btn-round  btn-success" value="Update !">
+                              <input type="reset" class="btn ripple-infinite  btn-round  btn-warning" value="Cancel!">
+                            </div>
+                          </div>
+                    
+                    </form>
+                    
+                        
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+          
+      </div>
+    </div>
+  <!-- end: content -->
+
+{% endblock %}
