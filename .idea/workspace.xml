@@ -3,16 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7206d093-bb90-40d6-baef-75c3326cc6a5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portal/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/portal/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/newsportal/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/newsportal/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/newsportal/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/newsportal/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/newsportal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/newsportal/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/newsportal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/newsportal/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portal/portal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/portal/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portal/portal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/portal/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portal/templates/backend/category/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/backend/category/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portal/templates/backend/category/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/backend/category/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portal/templates/backend/category/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/backend/category/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portal/templates/backend/master/master.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/backend/master/master.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +35,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/dipesh_newsportal" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/newsportal-master" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -65,14 +59,14 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="402" y="284" key="FileChooserDialogImpl" timestamp="1584774476679">
+    <state x="402" y="284" key="FileChooserDialogImpl" timestamp="1584895271555">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="402" y="284" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1584774476679" />
-    <state x="668" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1584771361069">
+    <state x="402" y="284" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1584895271555" />
+    <state x="668" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1584894776777">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="668" y="367" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584771361069" />
+    <state x="668" y="367" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584894776777" />
     <state x="285" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1584599670220">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
