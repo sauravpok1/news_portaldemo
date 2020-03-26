@@ -3,8 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 
 
-def home(request):
-    return render(request,'backend/home.html')
+
 
 def signin(request):
     if request.method=='GET':
@@ -20,7 +19,7 @@ def signin(request):
             messages.add_message(request,messages.ERROR,"Username or Password doesn't match")
             return redirect('signin')
 
-
+# login requ
 def dashboard(request):
     return render(request,'backend/dashboard.html')
 
@@ -28,3 +27,10 @@ def dashboard(request):
 def signout(request):
     logout(request)
     return redirect('signin')
+
+def home(request):
+    return render(request,'frontend/website/index.html')
+def category(request):
+    return render(request,'frontend/website/index.html')
+def news(request):
+    return render(request,'frontend/website/index.html')

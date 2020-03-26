@@ -75,9 +75,9 @@ def create_news(request):
     if form.is_valid():
         form.save()
         messages.add_message(request, messages.SUCCESS, "News added successfully")
-        return redirect('news')
+        return redirect('list_news')
     context = {
-        'forms': form
+        'form': form
     }
     return render(request, 'backend/news/create.html', context)
 
@@ -88,7 +88,7 @@ def edit_news(request, id):
     if form.is_valid():
         form.save()
         messages.add_message(request, messages.SUCCESS, "News updated successfully")
-        return redirect('news')
+        return redirect('list_news')
     context = {
         'forms': form
 
@@ -100,4 +100,4 @@ def delete_news(request, id):
     news = News.objects.get(pk=id)
     news.delete()
     messages.add_message(request, messages.SUCCESS, "News successfully deleted")
-    return redirect('news')
+    return redirect('list_news')

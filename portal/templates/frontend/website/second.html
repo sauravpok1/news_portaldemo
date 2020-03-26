@@ -1,129 +1,9 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <title>News</title>
-    <meta charset="UTF-8">
+{% extends 'base/base.html' %}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.png" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
-    <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css"/>
-        <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Ek+Mukta:200,300,400,500,600,700,800&amp;subset=devanagari" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
-</head>
-<body>
-<!--TOP NAV BAR-->
-<header class="fl-header-unit">
-    <div class="container">
-        <div class="row">
-            <div class="fl-top-navbar">
-                <div class="col-md-8 col-sm-12">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-calendar"></i><span>आज : २०७४ श्रावण २४ मंगलबार</span></a>
-                        </li>
-                        <li><i class="fa fa-phone"></i><span>+१२३४५६७८९०</span></li>
-                        <li><a class="mail" href="#"><i class="fa fa-envelope"><span>hello@abc.com</span></i></a>
-                        </li>
-                    </ul>
-                </div>
+{% block 'title' %}Home | News Portal{% endblock %}
 
-                <div class="col-md-4 col-sm-12 ">
-                    <ul class="social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-
-                        <a href="#"><i class="fa fa-google-plus"></i></a>
-
-                        <a href="#"><i class="fa fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!--TOP LOGO BAR-->
-<header class="fl-logo-unit">
-    <div class="container">
-        <div class="row">
-            <div class="fl-logo-navbar">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="fl-logo">
-                        <figure>
-                            <a href="index.html"><img src="image/newslogo.jpg" alt="logo"></a>
-                        </figure>
-                    </div>
-                </div>
-
-                <div class="col-md-8 col-sm-6 col-xs-12">
-                    <div class="logo-ads">
-                        <figure>
-                            <img src="image/1.jpg" alt="ad image">
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-
-<!--MENU-->
-<nav class="navbar navbar-default" data-spy="affix(delete-this)" data-offset-top="100">
-    <div class="container">
-        <div class="row">
-            <div class="fl-nav-menu">
-                <div class="col-md-12 col-sm-12">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-
-                            <span class="icon-bar"></span>
-
-                            <span class="icon-bar"></span>
-
-                            <span class="icon-bar"></span>
-                        </button>
-                        <div class="mobile-menu-text">
-                            <span>MENU</span>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="fl-menu-content collapse navbar-collapse " id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav active">
-                            <li class="active"><a href="index.html">गृहपृष्‍ठ</a></li>
-
-                            <li><a href="second_page.html">मुख्य समाचार</a></li>
-
-                            <li><a href="second_page.html">अन्तर्राष्ट्रिय</a></li>
-
-                            <li><a href="second_page.html">प्रवासी गतिविधि</a></li>
-
-                            <li><a href="second_page.html">मनोरञ्जन</a></li>
-
-                            <li><a href="second_page.html">खेलकुद</a></li>
-
-                            <li><a href="second_page.html">समाचार</a></li>
-
-                            <li><a href="second_page.html">विचार/विश्लेषण</a></li>
-
-                            <li><a href="second_page.html">आर्थिक</a></li>
-                        </ul>
-                    </div>
-                     <!-- /.navbar-collapse -->
-                </div>
-            </div>
-        </div>
-    </div>
-</nav>
-
+{% block 'content' %}
+{% load static %}
 
 <div class="fl-detail-page-wrapper">
     <div class="container">
@@ -135,7 +15,7 @@
                             <header class="news-header">
                                 <h2>
                                     <span>
-                                        <a href="#">राजनीत</a>
+                                        <a href="#">Sports</a>
                                     </span>
                                 </h2>
                                 <div class="clearfix"></div>
@@ -143,10 +23,10 @@
 
                             <div class="news-detail-content">
                                 <header>
-                                    <h1>देउवा र पौडेलको बेमेल कायमै, तीन सातापछि भेट हुँदा देखिएन हार्दिकत</h1>
+                                    <h1>दMessi </h1>
                                 </header>
 
-                                <time>कात्तिक १८, २०७५<span></span></time>
+                                <time>Lado date<span></span></time>
 
                                 <div class="share-option">
                                     <ul>
@@ -162,31 +42,14 @@
                                     <img src="image/p1.jpg" alt="image">
                                 </figure>
 
-                                <p>२२ साउन, काठमाडौं । अमेरिकन कम्पनी यूएमका दुईवटा नयाँ बाइक नेपालमा सार्वजनिक
-                                    गरिएको छ । आईएमई ग्रुप अन्तर्गतको आईएमई अटोमोटिभ्स प्रालिले यूएमको रेनिगेड ३००
-                                    सिरिजका दुई नयाँ बाइक नेपाल ल्याएको हो । अमेरिकन कम्पनी यूएमका दुईवटा नयाँ बाइक नेपालमा
-                                    सार्वजनिक
-                                    गरिएको छ । आईएमई ग्रुप अन्तर्गतको आईएमई अटोमोटिभ्स प्रालिले यूएमको रेनिगेड ३००
-                                    सिरिजका दुई नयाँ बाइक नेपाल ल्याएको हो ।</p>
+                                <p>Messi is best</p>
 
                                 <p>
-                                    परिषद्बाट गएको टोलीले सात जनाको रगतको नमूना परीक्षण गर्दा दुई जनामा लेप्टोस्पाइरोसिस् पुष्टि
-                                    भएको हो। परिषद्ले
-                                    इपिडिमियोलोजी तथा रोग नियन्त्रण महाशाखा, जिल्ला जनस्वास्थ्य कार्यालय मोरङ, कोशी क्षेत्रीय
-                                    अस्पताल, नोबेल मेडिकल कलेज,
-                                    विश्व स्वास्थ्य संगठन विराटनगर कार्यालय, सम्बन्धित वडा कार्यालयको सहयोगमा स्वास्थ्य परीक्षण,
-                                    रगतको नमूना संकलन र स्थलगत
-                                    अध्ययन गरेको थियो।
+                                   Rolando suck my cock
                                 </p>
 
                                 <p>
-                                    लेप्टोस्पाइरोसिस मुख्य गरी जनावरमा हुने संक्रमण हो, जुन उपयुक्त वातावरणीय अवस्थामा जनावरबाट
-                                    मानिसमा सर्छ। यो संक्रमण विभिन्न
-                                    सेरोटाइप्सका लेप्टोस्पाइरा ब्याक्टेरियाहरुले गराउँछन्। यो रोगले मध्यम प्रकारको ज्वरो
-                                    आउनेदेखि, कलेजो र मिर्गौलासम्मलाई घातक असर गर्छ।
-                                    यो रोगबारे सर्वप्रथम सन् १९८६ मा एडल्फ वेल्सले वर्णन गरेकाले यसलाई वेल्स रोग पनि भनिन्छ। यो
-                                    जनावरबाट मानिसमा सजिलै सर्ने रोग
-                                    हो। उच्च तापक्रम भएका देश तथा डुवानका क्षेत्रहरुमा यो रोग प्रकोपका रुपमा देखा पर्छ।
+                                   Nindra lago
                                 </p>
                             </div>
                         </div>
@@ -196,7 +59,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <header class="news-header">
-                            <h2>सम्बन्धित शीर्षकहरु</h2>
+                            <h2>topics</h2>
                             <div class="clearfix"></div>
                         </header>
                     </div>
@@ -208,52 +71,7 @@
                             </figure>
 
                             <a href="#">
-                                <h1>कर्णालीमा अस्पताल नपुग्दै जान्छ बिरामीको ज्यान, तीन महिनाका यी कर्णालीमा
-                                    अस्पता नपुग्दै जान्छ बिरामीको ज्यान, तीन महिनाका यी कर्णालीमा अस्पताल
-                                    नपुग्दै जान्छ बिरामीको ज्यान, तीन महिनाका यी कर्णालीमा अस्पता नपुग्दै जान्छ
-                                    बिरामीको ज्यान, तीन महिनाका यी </h1>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="page-related-news-detail">
-                            <figure>
-                                <img src="image/12.jpg" alt="image">
-                            </figure>
-
-                            <a href="#">
-                                <h1>दलित समुदायबाट डाक्टर बनेका काशीरामः विपन्न समुदायको सेवागर्ने कर्णालीमा
-                                    अस्पताल नपुग्दै जान्छ बिरामीको ज्यान, तीन महिनाका यी कर्णालीमा अस्पता
-                                    नपुग्दै जान्छ बिरामीको ज्यान, तीन महिनाका यी </h1>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="page-related-news-detail">
-                            <figure>
-                                <img src="image/i1.jpg" alt="image">
-                            </figure>
-
-                            <a href="#">
-                                <h1>दुर्गममा जानै चाहँदैनन् छात्रवृत्तिका डाक्टर, काठमाडौँ वरिपरि भने कर्णालीमा
-                                    अस्पताल नपुग्दै जान्छ बिरामीको ज्यान, तीन महिनाका यी कर्णालीमा अस्पता
-                                    नपुग्दै जान्छ बिरामीको ज्यान, तीन महिनाका यी </h1>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="page-related-news-detail">
-                            <figure>
-                                <img src="image/i2.jpg" alt="image">
-                            </figure>
-
-                            <a href="#">
-                                <h1>डा. गोविन्द केसीका समर्थकको आवेग: 'सरकारी भुटुनमा कर्णालीमा अस्पताल नपुग्दै
-                                    जान्छ बिरामीको ज्यान, तीन महिनाका यी कर्णालीमा अस्पता नपुग्दै जान्छ बिरामीको
-                                    ज्यान, तीन महिनाका यी </h1>
+                                <h1>Fuck </h1>
                             </a>
                         </div>
                     </div>
@@ -264,17 +82,17 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="contact-form">
-                            <h3>यसमा तपाइको मत</h3>
+                            <h3>Your Opinion</h3>
                             <form>
-                                <label>नाम (अनिवार्य)</label>
+                                <label>Name(Must)</label>
                                 <input type="text" name="name" placeholder="Your name">
 
 
-                                <label>इमेल (अनिवार्य)</label>
+                                <label>Email(Must)</label>
                                 <input type="email" name="email" placeholder="Your email">
 
 
-                                <label>प्रतिक्रिया दिनुहोस् </label>
+                                <label>Feedback </label>
                                 <textarea name="name" placeholder="message"></textarea>
                                 <input type="submit" name="submit">
                             </form>
@@ -288,157 +106,9 @@
                     <figure>
                         <img src="image/adv3.jpg">
                     </figure>
-                     <figure>
-                        <img src="image/adv4.jpg">
-                    </figure>
-                     <figure>
-                        <img src="image/adv5.jpg">
-                    </figure>
-                     <figure>
-                        <img src="image/adv3.jpg">
-                    </figure>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- footer -->
-<footer class="fl-footer-wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-12">
-                <div class="footer-contact">
-                    <figure>
-                        <img src="image/newslogo.jpg" alt="logo">
-                    </figure>
-                    <p><i class="fa fa-map-marker"></i>काठमाडौं, नेपाल</p>
-                    <p><i class="fa fa-phone"></i>१२३४५६७८९०</p>
-                    <p><i class="fa fa-envelope"></i>hello@abc.com</p>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-4">
-                <div class="footer-news">
-                    <h2>समाचार</h2>
-                    <ul>
-                        <li><a href="#">समाज</a></li>
-
-                        <li><a href="#">राजनीति</a></li>
-
-                        <li><a href="#">अपराध</a></li>
-
-                        <li><a href="#">खेलकुद़़</a></li>
-
-                        <li><a href="#">प्रवास</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-4">
-                <div class="footer-news">
-                    <h2>विजनेश</h2>
-                    <ul>
-                        <li><a href="#">बजार</a></li>
-
-                        <li><a href="#">पर्यटन</a></li>
-
-                        <li><a href="#">रोजगार</a></li>
-
-                        <li><a href="#">बैँक / वित्त</a></li>
-
-                        <li><a href="#">सूचना-प्रविधि</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-4">
-                <div class="footer-news">
-                    <h2>मनोरञ्जन</h2>
-                    <ul>
-                        <li><a href="#">सिनेमा</a></li>
-
-                        <li><a href="#">संगीत</a></li>
-
-                        <li><a href="#">कला</a></li>
-
-                        <li><a href="#">भिडियो</a></li>
-
-                        <li><a href="#">ग्यालरी</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-        <!--COPYRIGHT FOOTER-->
-<footer class="copyright-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <span>Copyright&#x24B8;&nbsp;All Rights Reserved.</span>
-            </div>
-
-            <div class="col-md-6">
-                <span>Designed & Developed By:&nbsp;<a href="#">Freelancer Unit Pvt. Ltd.</a></span>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js" type="text/javascript"></script>
-<script src="js/owl.carousel.min.js" type="text/javascript"></script>
-
-        <!--breaking-news-->
-        <script>
-            $('.breaking1').owlCarousel({
-                loop: true,
-                margin: 10,
-                nav: true,
-                autoplay: true,
-                autoplaySpeed: 5000,
-                navigationText: [
-                    "<i class='icon-chevron-left icon-white'><</i>",
-                    "<i class='icon-chevron-right icon-white'>></i>"],
-                lazyLoad: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 1
-                    },
-                    1000: {
-                        items: 1
-                    }
-                }
-            })
-        </script>
-        <!--breaking-news-->
-
-        <!--Feature slier-->
-<script>
-    $('.type1').owlCarousel({
-        loop: true,
-        margin: 8,
-        autoplay: true,
-        autoplaySpeed: 1000,
-        autoplayTimeout: 3000,
-        dots: false,
-        stopOnHover: true,
-        nav: true,
-
-        responsive: {
-            0: {
-                items: 1
-            },
-            700: {
-                items: 3
-            },
-            1000: {
-                items: 4
-            }
-        }
-    })
-
-</script>
-
-    </body>
-</html>

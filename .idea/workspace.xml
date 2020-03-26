@@ -3,10 +3,148 @@
   <component name="ChangeListManager">
     <list default="true" id="7206d093-bb90-40d6-baef-75c3326cc6a5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/portal/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/newsportal/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/newsportal/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portal/newsportal/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/newsportal/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/newsportal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/newsportal/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/newsportal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/newsportal/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/portal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/portal/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/portal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/portal/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/backend/master/master.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/backend/master/master.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/css/font-awesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/css/owl.carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/css/owl.carousel.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/css/owl.carousel.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/css/owl.carousel.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/css/owl.theme.default.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/css/owl.theme.default.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/HELP-US-OUT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/HELP-US-OUT.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/css/font-awesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/css/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/fonts/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/less/animated.less" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/less/animated.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/less/bordered-pulled.less" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/less/bordered-pulled.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/less/core.less" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/less/core.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/less/fixed-width.less" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/less/fixed-width.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/less/font-awesome.less" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/less/font-awesome.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/less/icons.less" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/less/icons.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/less/larger.less" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/less/larger.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/less/list.less" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/less/list.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/less/mixins.less" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/less/mixins.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/less/path.less" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/less/path.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/less/rotated-flipped.less" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/less/rotated-flipped.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/less/screen-reader.less" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/less/screen-reader.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/less/stacked.less" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/less/stacked.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/less/variables.less" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/less/variables.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/scss/_animated.scss" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/scss/_animated.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/scss/_bordered-pulled.scss" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/scss/_bordered-pulled.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/scss/_core.scss" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/scss/_core.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/scss/_fixed-width.scss" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/scss/_fixed-width.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/scss/_icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/scss/_icons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/scss/_larger.scss" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/scss/_larger.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/scss/_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/scss/_list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/scss/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/scss/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/scss/_path.scss" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/scss/_path.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/scss/_rotated-flipped.scss" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/scss/_rotated-flipped.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/scss/_screen-reader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/scss/_screen-reader.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/scss/_stacked.scss" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/scss/_stacked.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/scss/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/font-awesome-4.6.3/scss/font-awesome.scss" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/font-awesome-4.6.3/scss/font-awesome.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/fontawesome-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/glyphicons-halflings-regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/glyphicons-halflings-regular.svg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/glyphicons-halflings-regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/1-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/1-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/2-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/2-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/3-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/3-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/Courses10-570x360.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/Courses10-570x360.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/Courses2-570x360.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/Courses2-570x360.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/Courses3-570x360.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/Courses3-570x360.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/Courses4-570x360.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/Courses4-570x360.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/adv.gif" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/adv.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/adv.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/adv.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/adv2.png" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/adv2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/adv3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/adv3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/adv4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/adv4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/adv5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/adv5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/adv6.gif" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/adv6.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/adv7.gif" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/adv7.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/adv8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/adv8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/apple-iphone-books-desk.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/apple-iphone-books-desk.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/banner.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/banner.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/banner1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/banner1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/banner2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/banner2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/bf.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/bf.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/c1.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/c1.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/e1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/e1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/h1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/h1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/h2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/h2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/h3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/h3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/i1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/i1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/i2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/i2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/i3.png" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/i3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/i4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/i4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/main-news-big.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/main-news-big.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/main-news-big1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/main-news-big1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/n1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/n1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news-big1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news-big1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_03.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_04.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_05.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_05.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_06.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_06.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_07.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_07.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_08.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_08.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_09.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_09.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_13.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_14.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_15.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/news_5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/news_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/newslogo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/newslogo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/nlogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/nlogo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/p1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/p1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/top-news-2.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/top-news-2.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/top-news.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/top-news.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/image/v1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/image/v1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/frontend/website/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/js/jquery-3.1.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/js/jquery-3.1.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/js/jquery-3.2.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/js/jquery-3.2.1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/js/jquery.easy-ticker.js" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/js/jquery.easy-ticker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/js/jquery.easy-ticker.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/js/jquery.easy-ticker.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/js/jquery.myown-easy-ticker.js" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/js/jquery.myown-easy-ticker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/js/myown.js" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/js/myown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/js/owl.carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/js/owl.carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/js/owl.carousel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/js/owl.carousel.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/frontend/website/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/nbproject/private/private.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/nbproject/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/nbproject/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/portal/static/frontend/nbproject/project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/second.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/frontend/website/second.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +176,12 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/newsportal-master" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Saurav\PycharmProjects\newsportal\portal\templates\backend" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Saurav\PycharmProjects\newsportal\portal\newsportal" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Saurav\PycharmProjects\newsportal\portal\static\frontend" />
+      <recent name="C:\Users\Saurav\PycharmProjects\newsportal\portal\templates\backend" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -63,13 +202,13 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="402" y="284" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1584895271555" />
-    <state x="668" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1584894776777">
+    <state x="668" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1584944270725">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="668" y="367" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584894776777" />
-    <state x="285" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1584599670220">
+    <state x="668" y="367" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584944270724" />
+    <state x="285" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1584898866840">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="285" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1584599670220" />
+    <state x="285" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1584898866840" />
   </component>
 </project>
