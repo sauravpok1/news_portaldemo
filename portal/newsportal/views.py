@@ -65,7 +65,7 @@ def delete_category(request, id):
 def list_news(request):
     data = News.objects.all()[::-1]
     context = {
-        'news': data
+        'newses': data
     }
     return render(request, 'backend/news/list.html', context)
 

@@ -1,6 +1,7 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
+from newsportal.models import Category, News
 
 
 
@@ -29,8 +30,27 @@ def signout(request):
     return redirect('signin')
 
 def home(request):
-    return render(request,'frontend/website/index.html')
-def category(request):
-    return render(request,'frontend/website/index.html')
+    menus = Category.objects.filter(status=1)
+
+    context = {
+       'menus':menus
+    }
+    return render(request,'frontend/website/index.html',context)
+def category(request,slug):
+    menus = Category.objects.filter(status=1)
+    cat = Category.objects.get(slug=slug)
+    news_as_per_category = News.objects.filter(category_id=cat.id, status=1)
+
+    context = {
+        'menus': menus,
+        'news':news_as_per_category
+    }
+
+    return render(request,'frontend/website/list.html',context)
 def news(request):
-    return render(request,'frontend/website/index.html')
+    menus = Category.objects.filter(status=1)
+
+    context = {
+        'menus': menus
+    }
+    return render(request,'frontend/website/index.html',context)

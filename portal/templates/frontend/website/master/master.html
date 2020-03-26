@@ -102,19 +102,10 @@
                     <div class="fl-menu-content collapse navbar-collapse " id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav active">
                             <li class="active"><a href="index.html">Front Page</a></li>
+                            {% for menu in menus %}
 
-                            <li><a href="second_page.html">Sports</a></li>
-
-                            <li><a href="second_page.html">Business</a></li>
-
-                            <li><a href="second_page.html">Entertianment</a></li>
-
-                            <li><a href="second_page.html">Health and Lifestyle</a></li>
-
-
-
-
-
+                            <li><a href="{% url 'category' menu.slug %}">{{menu.title}}</a></li>
+                            {% endfor %}
 
                         </ul>
                     </div>

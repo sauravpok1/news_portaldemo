@@ -28,7 +28,7 @@ urlpatterns = [
     path('backend/crud/',include('newsportal.urls')),
 
     path('', views.home, name='home'),
-    path('category/', views.category, name='category'),
+    path('category/<slug>', views.category, name='category'),
     path('news/', views.news, name='news'),
 
 ]
