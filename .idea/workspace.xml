@@ -2,25 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7206d093-bb90-40d6-baef-75c3326cc6a5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/portal/contactus/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portal/contactus/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portal/templates/backend/contactus/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portal/templates/backend/contactus/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portal/templates/backend/contactus/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/portal/templates/frontend/website/contactus.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/portal/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portal/newsportal/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/newsportal/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portal/portal/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/portal/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/portal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/portal/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/portal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/portal/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portal/templates/backend/master/master.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/backend/master/master.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/templates/backend/news/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/backend/news/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portal/templates/backend/news/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/backend/news/edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/templates/backend/news/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/backend/news/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/frontend/website/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/master/master.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/frontend/website/master/master.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/second.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/frontend/website/second.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

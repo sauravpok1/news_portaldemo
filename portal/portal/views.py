@@ -31,9 +31,24 @@ def signout(request):
 
 def home(request):
     menus = Category.objects.filter(status=1)
+    main_news = News.objects.filter(status=1,main_news=1).order_by('-created_date')
+    main1 = main_news.first()
+    mains= main_news[1:3]
+
+    cat1_news = News.objects.filter(category_id=menus.first().id, status=1).order_by('-created_date')
+    cat2_news = News.objects.filter(category_id=menus[1].id, status=1).order_by('-created_date')
+    cat3_news = News.objects.filter(category_id=menus[2].id, status=1).order_by('-created_date')
+    cat4_news = News.objects.filter(category_id=menus[3].id, status=1).order_by('-created_date')
 
     context = {
-       'menus':menus
+       'menus':menus,
+        'main1':main1,
+        'mains':mains,
+        'cat1_news':cat1_news,
+        'cat2_news': cat2_news,
+        'cat3_news':cat3_news,
+        'cat4_news': cat4_news,
+
     }
     return render(request,'frontend/website/index.html',context)
 def category(request,slug):

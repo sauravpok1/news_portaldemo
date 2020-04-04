@@ -3,49 +3,11 @@
 {% block title %} Category | News Portal {% endblock %}
 
 {% block content %}
-<!-- advertisement1 -->
-<section class="fl-advertisement1-wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="logo-ads1-banner">
-                    <figure>
-                        <img src="image/adv.jpg" alt="ad image">
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-<!--Sports-news-->
-<!--<section class="fl-Sports-news-wrapper">-->
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--            <div class="col-md-12">-->
-<!--                <article class="Sports-news">-->
-<!--                    <h1><span>Sports</span></h1>-->
-<!--                    <label class="line"></label>-->
-<!--                    <div class="Sports-news-item">-->
-<!--                        <h2><a href="#">Dipesh named guy shit inside football ground while maatch was running</a></h2>-->
-<!--                        <img src="image/p1.jpg">-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </article>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-
-<!-- main news portion starts -->
 <!--MAIN NEWS-->
 <div class="fl-main-news-wrapper">
     <div class="container">
         <div class="row same-height">
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <div class="main-news-wrapper">
                     <header class="news-header">
                         <h2>
@@ -59,34 +21,44 @@
                     <section class="main-news-entry">
                         <article class="main-news-big-content">
                             <a href="#">
-                                <h1>३६ अर्ब लगानीमा चिनियाँले बनाएको धुवाँरहित सिमेन्ट उद्योग&nbsp;</h1>
+                                <h1>{{main1.title}}&nbsp;</h1>
                                 <figure>
-                                    <img src="image/news-big1.jpg" alt="image">
+                                   {% if main1.image %}
+                                        <img src="{{MEDIA_URL}}{{main1.image.url}}" alt="image">
+                                    {% else %}
+                                        NO image
+                                    {% endif %}
                                 </figure>
                             </a>
-                            <p>२१ साउन, काठमाडौं । अहिले बैंक तथा वित्तीय संस्थाहरुले धमाधम वित्तीय विवरणहरु प्रकाशित गरिरहेका छन् । वित्तीय विवरणमा दिइएका तथ्यांकहरुले मोटामोटी रुपमा संस्थाको अवस्था कस्तो
-                                        छ, स्पष्ट देखाउँछ । बैंकहरुले कति नाफा र कति ब्याज कमाए, कति सञ्चालन खर्च..</p>
+                            <p>{{main1.description}}</p>
                         </article>
                         <div class="row">
+                            {% for main in mains %}
                             <article class="col-md-6">
+
                                 <div class="main-news-small-content">
                                     <a href="#">
-                                        <h2>पाल्पामा स्वाइन फ्लुबाट ३ को मृत्यु, थप ३ लाई उपचार गर्न हेलिकोप्टरबाट काठमाडौँ ल्याइयो</h2>
+                                        <h2>{{ main.title }}</h2>
                                         <div class="main-news-small-detail">
                                             <div class="row">
                                                 <div class="col-md-5 col-sm-4">
                                                     <figure>
-                                                        <img src="image/n1.jpg" alt="image">
+                                                         {% if main.image %}
+                                                            <img src="{{MEDIA_URL}}{{main.image.url}}" alt="image">
+                                                        {% else %}
+                                                            NO image
+                                                        {% endif %}
                                                     </figure>
                                                 </div>
                                                 <div class="col-md-7 col-sm-8">
-                                                    <p>काठमाडौँ- बुबालाई कलेजो प्रत्यारोपण गर्न कलेजो दिएकी छोरी सरिता महर्जनको परिवारलाई एक लाख रुपैयाँ सहयोग</p>
+                                                    <p>{{main.description}}</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
                             </article>
+                            {% endfor %}
 
 
                         </div>
@@ -94,37 +66,16 @@
                 </div>
             </div>
 
-           <div class="col-md-3">
-                <div class="place-for-ads">
-                    <figure>
-                        <img src="image/adv3.jpg">
-                    </figure>
 
-                </div>
-            </div>
         </div>
     </div>
 </div>
-<!--main news portion starts-->
-<!--<section class="fl-advertisement3-wrapper">-->
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--            <div class="col-md-12">-->
-<!--                <div class="logo-ads3-banner">-->
-<!--                    <figure>-->
-<!--                        <img src="image/adv2.png" alt="ad image">-->
-<!--                    </figure>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
 
 <!--Sports News-->
 <div class="fl-sports-country-news-wrapper">
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="sports-news-wrapper">
                      <header class="news-header">
                         <h2>
@@ -137,27 +88,24 @@
 
                     <div class="international-new-content">
                         <div class="row">
+                            {% for cat1 in cat1_news %}
                             <div class="col-md-4">
                                 <article class="international-news-big-content">
                                     <a href="#">
-                                        <h1>Dipesh Khatiwada Mujraa dance enjoyed by Wanda Metropolitiano Stadium Audiences</h1>
+                                        <h1>{{cat1.title}}</h1>
                                         <figure>
-                                            <img src="image/i1.jpg" alt="image">
+                                             {% if cat1.image %}
+                                                <img src="{{MEDIA_URL}}{{cat1.image.url}}" alt="image">
+                                             {% else %}
+                                                NO image
+                                             {% endif %}
                                         </figure>
                                     </a>
-                                    <!-- <p>२१ साउन, काठमाडौं । अहिले बैंक तथा वित्तीय संस्थाहरुले धमाधम वित्तीय विवरणहरु  प्रकाशितगरिरहेका छन् । वित्तीय विवरणमा दिइएका तथ्यांकहरुले मोटामोटी रुपमा संस्थाको अवस्था कस्तो छ, स्पष्ट देखाउँछ । बैंकहरुले कति नाफा र कति ब्याज कमाए, कति सञ्चालन खर्चछ, स्पष्ट देखाउँछ । बैंकहरुले कति नाफा र कति ब्याज कमाए, कति सञ्चालन गरिरहेका छन् । वित्तीय विवरणमा दिइएका तथ्यांकहरुले मोटामोटी रुपमा संस्थाको अवस्था कस्तो छ, स्पष्ट देखाउँछ । बैंकहरुले कति नाफा र कति ब्याज कमाए, कति सञ्चालन खर्चछ, स्पष्ट देखाउँछ । बैंकहरुले कति नाफा र कति ब्याज कमाए, कति सञ्चालन</p> -->
+                                    <p>{{cat1.description}}</p>
                                 </article>
                             </div>
-                            <div class="col-md-4">
-                                <article class="international-news-big-content">
-                                    <a href="#">
-                                        <h1>Corana too rude</h1>
-                                        <figure>
-                                            <img src="image/i2.jpg" alt="image">
-                                        </figure>
-                                    </a>
-                                </article>
-                            </div>
+                            {% endfor %}
+
 
                         </div>
                     </div>
@@ -185,18 +133,20 @@
 
                     <div class="mixed-business-content">
                         <div class="row">
-                            <div class="col-md-6">
+                            {% for cat2 in cat2_news %}
+                            <div class="col-md-3">
                                 <div class="mixed-business-big">
                                     <figure>
-                                        <img src="image/e1.jpg" alt="image">
+                                        <img src="{{MEDIA_URL}}{{cat2.image.url}}" alt="image">
                                     </figure>
                                     <div class="economic-content">
-                                        <a href="#"><h1>Wise Man Bill Gates</h1></a>
-                                        <p>Bill gates love waiwai and exchange it with microsoft </p>
+                                        <a href="#"><h1>{{ cat2.title }}</h1></a>
+                                        <p>{{ cat2.description }}</p>
                                     </div>
+
                                 </div>
                             </div>
-
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -206,7 +156,7 @@
                     <header class="news-header">
                         <h2>
                             <span>
-                                <a href="second.html">लोकप्रिय</a>
+                                <a href="second.html">Entertianment</a>
                             </span>
                         </h2>
                         <div class="clearfix"></div>
@@ -216,13 +166,15 @@
                         <div role="tabpanel" class="tab-pane active" id="latest">
                             <div class="sidebar-country-news-content">
                                 <ul>
+                                    {% for cat3 in cat3_news %}
                                     <li>
                                         <div class="country-news-content">
                                             <a href="#">
-                                                <h4> जापनिज इन्सेफ्लाइटिसका यस्ता छन् लक्षण र रोकथाम जापनिज इन्सेफ्लाइटिसका यस्ता छन् लक्षण र रोकथाम जापनिज इन्सेफ्लाइटिसका यस्ता छन् लक्षण र रोकथाम</h4>
+                                                <h4> {{cat3.title}} </h4>
                                             </a>
                                         </div>
                                     </li>
+                                    {% endfor %}
 
                                 </ul>
                             </div>
@@ -234,20 +186,7 @@
     </div>
 </div>
 
-<!-- advertisement3 -->
-<!--<section class="fl-advertisement3-wrapper">-->
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--            <div class="col-md-12">-->
-<!--                <div class="logo-ads3-banner">-->
-<!--                    <figure>-->
-<!--                        <img src="image/adv2.png" alt="ad image">-->
-<!--                    </figure>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
+
 
 <!--health and Lifestyle news-->
 <div class="fl-health-news-wrapper">
@@ -267,15 +206,17 @@
                     <div class="health-news-slider">
                         <div class="owl-carousel owl-theme type1">
                             <div class="item">
+                                 {% for cat4 in cat4_news %}
                                 <div class="health-news-detail">
                                     <figure>
-                                        <img src="image/h1.jpg" alt="image">
+                                        <img src="{{MEDIA_URL}}{{cat4.image.url}}" alt="image">
                                     </figure>
 
                                     <a href="#">
-                                        <h1>Corana can be cured by cow's pee</h1>
+                                        <h1>{{cat4.title}}</h1>
                                     </a>
                                 </div>
+                                {% endfor %}
                             </div>
 
                         </div>
@@ -288,62 +229,7 @@
 
 
 
-<!--&lt;!&ndash; advertisement start &ndash;&gt;-->
-<!--<div class="fl-advertisement-section">-->
-<!--    <div class="container">-->
-<!--        <div class="row">-->
-<!--            <div class="col-md-12">-->
-<!--                <div class="fl-advertisement-inner">-->
-<!--                    <div class="col-md-3">-->
-<!--                        <div class="fl-advertisement-image">-->
-<!--                            <figure>-->
-<!--                                <img src="image/adv6.gif">-->
-<!--                            </figure>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-<!--&lt;!&ndash; advertisement ends &ndash;&gt;-->
 
-<!-- entertianment news -->
-<div class="fl-mix-entertianment-wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-9">
-                <div class="entertianment-wrapper">
-                    <header class="news-header">
-                        <h2>
-                            <span>
-                                <a href="second_page.html">Entertianment</a>
-                            </span>
-                        </h2>
-                        <div class="clearfix"></div>
-                    </header>
 
-                    <div class="entertianment-content">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="share-big">
-                                    <figure>
-                                        <img src="image/e1.jpg" alt="image">
-                                    </figure>
-                                    <div class="share-content-inner">
-                                        <a href="#"><h1>joke</h1></a>
-                                        <p>hahahahahahahahahahhahahahahahahha </p>
-                                    </div>
-                                </div>
-                            </div>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            </div>
-        </div>
-    </div>
-</div>
 {% endblock %}
