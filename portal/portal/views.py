@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from newsportal.models import Category, News
 
-
+from contactus.forms import contactForm
 
 
 def signin(request):
@@ -54,3 +54,17 @@ def news(request):
         'menus': menus
     }
     return render(request,'frontend/website/index.html',context)
+def contactus(request):
+    menus = Category.objects.filter(status=1)
+    form=contactForm(request.POST or None, request.FILES or None)
+    if form.is_valid():
+        form.save()
+        messages.add_message(request, messages.SUCCESS, " Feedback sent Successfully")
+        return redirect('contactus')
+
+    context = {
+        'menus': menus,
+        'forms':form
+    }
+    return render(request,'frontend/website/contactus.html',context)
+

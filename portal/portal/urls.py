@@ -30,6 +30,11 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('category/<slug>', views.category, name='category'),
     path('news/', views.news, name='news'),
+    path('contactus/', views.contactus, name='contactus'),
+
+    path('backend/contactus/', include('contactus.urls')),
+
+
 
 ]
 static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,0 +1,31 @@
+{% extends 'frontend/website/master/master.html' %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<div class="fl-detail-page-wrapper">
+    <div class="container">
+        <div class="row">
+           <div class="col-md-12">
+                <div class="contact-form">
+                {% include 'backend/includes/message.html' %}
+                    <h3>Fill form for feedback</h3>
+                    <form method="post" >
+                    {% csrf_token %}
+                    {{forms.as_p}}
+                        {% comment %} <label>Name</label>
+                        <input type="text" name="name" placeholder="Your name">
+
+                        <label>Email address</label>
+                        <input type="email" name="email" placeholder="Your email">
+
+                        <label>Give us Feedback </label>
+                        <textarea name="name" placeholder="message"></textarea> {% endcomment %}
+                        <input type="submit"  name="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -11,8 +11,7 @@
             <div class="col-md-12">
                 <h4 class="animated fadeInLeft">
                     News <span class="fa-angle-right fa"></span> Create
-                    <a href="{% url 'list_category' %}" class="btn btn-3d btn-primary"><span class="fa fa-plus"></span> List</a>
-
+                    <a href="{% url 'news' %}" class="btn btn-3d  btn-primary"><span class="fa fa-list"></span> List</a>
                 </h4>
                 {% include 'backend/includes/message.html' %}
             </div>
@@ -29,8 +28,7 @@
                   <div class="col-md-12">
                     <form action="" method="POST" id="form" novalidate="">
                      {% csrf_token %}
-                        {{ form.as_p }}
-
+                        {{forms.as_p}}
                     <div class="form-group">
                         <div class="col-sm-2">
                         </div>
@@ -40,18 +38,18 @@
                         </div>
                       </div>
                     </form>
-                    
-                    
-                        
+
+
+
                       </div>
                   </div>
                 </div>
               </div>
             </div>
-            
+
           </div>
 
-          
+
       </div>
     </div>
   <!-- end: content -->
@@ -69,7 +67,7 @@
           Text = Text.toLowerCase();
           var regExp = /\s+/g;
           Text = Text.replace(regExp,'-');
-          $("#slug").val(Text);        
+          $("#slug").val(Text);
       });
     });
 </script>
