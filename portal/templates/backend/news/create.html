@@ -71,6 +71,25 @@
           Text = Text.replace(regExp,'-');
           $("#slug").val(Text);        
       });
+
+
+      $("#id_description").change(function(){
+        var desc = $(this).val();
+
+        $.ajax({
+        url: '{% url "news_category_ajax" %}',
+        data: {
+          'desc': desc
+        },
+        dataType: 'json',
+        success: function (data) {
+          console.log(data);
+        }
+      });
+
+      });
+
+
     });
 </script>
 {% endblock %}

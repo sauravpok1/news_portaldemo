@@ -12,7 +12,7 @@
                     <header class="news-header">
                         <h2>
                             <span>
-                                <a href="second.html">Main News</a>
+                                <a href="{% url 'main_news' %}">Main News</a>
                             </span>
                         </h2>
                         <div class="clearfix"></div>
@@ -37,7 +37,7 @@
                             <article class="col-md-6">
 
                                 <div class="main-news-small-content">
-                                    <a href="#">
+                                    <a href="{% url 'news' main.slug %}">
                                         <h2>{{ main.title }}</h2>
                                         <div class="main-news-small-detail">
                                             <div class="row">
@@ -80,7 +80,7 @@
                      <header class="news-header">
                         <h2>
                             <span>
-                                <a href="second.html">Sports</a>
+                                <a href="{% url 'category' head_list.slug1 %}">{{head_list.title1}}</a>
                             </span>
                         </h2>
                         <div class="clearfix"></div>
@@ -125,7 +125,7 @@
                     <header class="news-header">
                         <h2>
                             <span>
-                                <a href="second_page.html">Business</a>
+                                <a href="{% url 'category' head_list.slug2 %}">{{head_list.title2}}</a>
                             </span>
                         </h2>
                         <div class="clearfix"></div>
@@ -156,7 +156,7 @@
                     <header class="news-header">
                         <h2>
                             <span>
-                                <a href="second.html">Entertianment</a>
+                                <a href="{% url 'category' head_list.slug3 %}">{{head_list.title3}}</a>
                             </span>
                         </h2>
                         <div class="clearfix"></div>
@@ -197,7 +197,7 @@
                     <header class="news-header">
                         <h2>
                             <span>
-                                <a href="second.html">Health and Lifestyle</a>
+                                <a href="{% url 'category' head_list.slug4 %}">{{head_list.title4}}</a>
                             </span>
                         </h2>
                         <div class="clearfix"></div>

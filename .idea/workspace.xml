@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7206d093-bb90-40d6-baef-75c3326cc6a5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/portal/templates/frontend/website/main_news.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/portal/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/newsportal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/newsportal/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/portal/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/portal/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/portal/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/portal/portal/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/templates/backend/news/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/backend/news/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portal/templates/backend/news/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/backend/news/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/New folder/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/frontend/website/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/frontend/website/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/master/master.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/frontend/website/master/master.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/portal/templates/frontend/website/second.html" beforeDir="false" afterPath="$PROJECT_DIR$/portal/templates/frontend/website/second.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/newsportal-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/portal/templates/frontend/website" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -51,15 +55,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Saurav\PycharmProjects\pull from git\news_portaldemo\portal\templates\frontend\website" />
+      <recent name="C:\Users\Saurav\PycharmProjects\newsportal\portal\newsportal" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Saurav\PycharmProjects\pull from git\news_portaldemo\portal\static\frontend\image" />
       <recent name="C:\Users\Saurav\PycharmProjects\pull from git\news_portaldemo\portal\templates\frontend\website" />
       <recent name="C:\Users\Saurav\PycharmProjects\pull from git\news_portaldemo\portal\templates\frontend\website\master" />
       <recent name="C:\Users\Saurav\PycharmProjects\pull from git\news_portaldemo\portal\templates\frontend" />
       <recent name="C:\Users\Saurav\PycharmProjects\newsportal\portal\static\frontend" />
-      <recent name="C:\Users\Saurav\PycharmProjects\newsportal\portal\templates\backend" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Saurav\PycharmProjects\newsportal\portal\newsportal" />
     </key>
   </component>
   <component name="SvnConfiguration">

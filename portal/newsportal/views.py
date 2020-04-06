@@ -5,7 +5,11 @@ from .forms import CategoryForm, NewsForm
 from .models import Category, News
 
 
+
+
 # Create your views here.
+
+
 @login_required(login_url='signin')
 def create_category(request):
     form= CategoryForm(request.POST or None,request.FILES or None)
@@ -26,7 +30,6 @@ def list_category(request):
         'categories': category
     }
     return render(request, 'backend/category/list.html',context )
-
 
 
 
@@ -101,3 +104,4 @@ def delete_news(request, id):
     news.delete()
     messages.add_message(request, messages.SUCCESS, "News successfully deleted")
     return redirect('list_news')
+

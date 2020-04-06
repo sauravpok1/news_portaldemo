@@ -1,6 +1,6 @@
 {% extends 'frontend/website/master/master.html' %}
 
-{% block title %}{{cat}} | News Portal{% endblock %}
+{% block title %}Main News | News Portal{% endblock %}
 
 {% block content %}
 
@@ -13,12 +13,12 @@
                     <header class="news-header">
                         <h2>
                             <span>
-                                <a href="#">{{cat}}</a>
+                                <a href="#">Main News</a>
                             </span>
                         </h2>
                         <div class="clearfix"></div>
                     </header>
-                            {% for n in news %}
+                            {% for n in main_news %}
                     <div class="news-content">
                         <header>
                             <a href="{% url 'news' n.slug %}"><h1>{{n.title}}</h1></a>

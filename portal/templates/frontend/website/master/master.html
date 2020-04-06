@@ -18,6 +18,8 @@
     <link href="{% static 'frontend/css/style.css' %}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
 <!--TOP NAV BAR-->
 <header class="fl-header-unit">
     <div class="container">
@@ -99,7 +101,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="fl-menu-content collapse navbar-collapse " id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav active">
-                            <li class="active"><a href="index.html">Front Page</a></li>
+                            <li class="active"><a href="{% url 'home' %}">Front Page</a></li>
                             {% for menu in menus %}
 
                             <li><a href="{% url 'category' menu.slug %}">{{menu.title}}</a></li>
@@ -121,34 +123,27 @@
 <footer class="fl-footer-wrapper">
     <div class="container">
         <div class="row">
-            <div class="col-md-3 col-sm-12">
+            <div class="col-md-4 col-sm-12">
                 <div class="footer-contact">
                     <figure>
-                        <img src="image/newslogo.jpg" alt="logo">
+                        <img src="{% static 'frontend/image/nlogo.png' %}" alt="logo">
                     </figure>
                     <p><i class="fa fa-map-marker"></i>काठमाडौं, नेपाल</p>
                     <p><i class="fa fa-phone"></i>१२३४५६७८९०</p>
                     <p><i class="fa fa-envelope"></i>hello@abc.com</p>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-4">
-                <div class="footer-news">
-                    <h2>Business</h2>
+             {% for menu in menus %}
+                <div class="col-md-2 col-sm-4">
+                    <div class="footer-news">
+                        <h2><a href="{% url 'category' menu.slug %}">{{menu.title}}</a></h2>
 
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-4">
-                <div class="footer-news">
-                    <h2>Entertianment</h2>
 
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-4">
-                <div class="footer-news">
-                    <h2>Health and Lifestyle</h2>
+                            {% endfor %}
 
-                </div>
-            </div>
+
         </div>
     </div>
 </footer>
@@ -161,7 +156,7 @@
             </div>
 
             <div class="col-md-6">
-                <span>Made with 💖 by&nbsp;<a href="#">OViis.</a></span>
+                <span>Made with 💖 by&nbsp;<a href="#">Saurav and D</a></span>
             </div>
             </div>
             </div>

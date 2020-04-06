@@ -1,5 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from newsportal.models import Category, News
 
@@ -35,13 +36,27 @@ def home(request):
     main1 = main_news.first()
     mains= main_news[1:3]
 
-    cat1_news = News.objects.filter(category_id=menus.first().id, status=1).order_by('-created_date')
-    cat2_news = News.objects.filter(category_id=menus[1].id, status=1).order_by('-created_date')
-    cat3_news = News.objects.filter(category_id=menus[2].id, status=1).order_by('-created_date')
-    cat4_news = News.objects.filter(category_id=menus[3].id, status=1).order_by('-created_date')
+    cat1_news = News.objects.filter(category_id=menus.first().id, status=1).order_by('-created_date')[:3]
+    cat2_news = News.objects.filter(category_id=menus[1].id, status=1).order_by('-created_date')[:2]
+    cat3_news = News.objects.filter(category_id=menus[2].id, status=1).order_by('-created_date')[:5]
+    cat4_news = News.objects.filter(category_id=menus[3].id, status=1).order_by('-created_date')[:4]
+    head_list = {
+        'title1': menus[0].title,
+        'slug1': menus[0].slug,
+        'title2': menus[1].title,
+        'slug2': menus[1].slug,
+        'title3': menus[2].title,
+        'slug3': menus[2].slug,
+        'title4': menus[3].title,
+        'slug4': menus[3].slug,
+        'title5': menus[4].title,
+        'slug5': menus[4].slug,
+    }
 
     context = {
        'menus':menus,
+       'head_list':head_list,
+
         'main1':main1,
         'mains':mains,
         'cat1_news':cat1_news,
@@ -58,17 +73,21 @@ def category(request,slug):
 
     context = {
         'menus': menus,
-        'news':news_as_per_category
+        'news':news_as_per_category,
+        'cat':cat,
     }
 
     return render(request,'frontend/website/list.html',context)
-def news(request):
+def news(request,slug):
     menus = Category.objects.filter(status=1)
+    news = News.objects.get(slug=slug)
+
 
     context = {
-        'menus': menus
+        'menus': menus,
+        'news': news,
     }
-    return render(request,'frontend/website/index.html',context)
+    return render(request,'frontend/website/second.html',context)
 def contactus(request):
     menus = Category.objects.filter(status=1)
     form=contactForm(request.POST or None, request.FILES or None)
@@ -83,3 +102,21 @@ def contactus(request):
     }
     return render(request,'frontend/website/contactus.html',context)
 
+def main_news(request):
+    menus = Category.objects.filter(status=1)
+    main_news = News.objects.filter(status=1, main_news=1).order_by('-created_date')
+
+
+    context = {
+        'menus': menus,
+        'main_news': main_news,
+
+    }
+
+    return render(request,'frontend/website/main_news.html',context)
+
+
+def news_category(request):
+    username = request.GET.get('desc', None)
+
+    return JsonResponse(username)

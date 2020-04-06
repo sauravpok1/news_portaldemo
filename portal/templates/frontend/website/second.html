@@ -1,8 +1,8 @@
-{% extends 'base/base.html' %}
+{% extends 'frontend/website/master/master.html' %}
 
-{% block 'title' %}Home | News Portal{% endblock %}
+{% block title %}Home | News Portal{% endblock %}
 
-{% block 'content' %}
+{% block content %}
 {% load static %}
 
 <div class="fl-detail-page-wrapper">
@@ -15,7 +15,7 @@
                             <header class="news-header">
                                 <h2>
                                     <span>
-                                        <a href="#">Sports</a>
+                                        <a href="#">{{news.category}}</a>
                                     </span>
                                 </h2>
                                 <div class="clearfix"></div>
@@ -23,10 +23,10 @@
 
                             <div class="news-detail-content">
                                 <header>
-                                    <h1>दMessi </h1>
+                                    <h1>{{news.title}} </h1>
                                 </header>
 
-                                <time>Date and Time<span></span></time>
+                                <time>Date and Time <span> {{news.created_date}}</span></time>
 
                                 <div class="share-option">
                                     <ul>
@@ -38,77 +38,60 @@
                                     </ul>
                                 </div>
 
-                                <figure>
-                                    <img src="image/p1.jpg" alt="image">
-                                </figure>
+                               <figure>
+                        {% if news.image %}
+                            <img src="{{MEDIA_URL}}{{news.image.url}}" alt="image">
+                        {% else %}
+                            NO image
+                        {% endif %}
+                        </figure>
 
-                                <p>Messi is best</p>
+                                <p>{{news.description}}</p>
 
-                                <p>
-                                   Rolando
-                                </p>
 
-                                <p>
-                                   Nindra lago
-                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
+<!--                related news-->
+
+<!--                <div class="row">-->
+<!--                    <div class="col-md-12">-->
+<!--                        <header class="news-header">-->
+<!--                            <h2>topics</h2>-->
+<!--                            <div class="clearfix"></div>-->
+<!--                        </header>-->
+<!--                    </div>-->
+
+<!--                    <div class="col-md-3">-->
+<!--                        <div class="page-related-news-detail">-->
+<!--                            <figure>-->
+<!--                                <img src="image/n1.jpg" alt="image">-->
+<!--                            </figure>-->
+
+<!--                            <a href="#">-->
+<!--                                <h1>Jay shree ram</h1>-->
+<!--                            </a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+
+<!--                </div>-->
+
                 <div class="row">
                     <div class="col-md-12">
-                        <header class="news-header">
-                            <h2>topics</h2>
-                            <div class="clearfix"></div>
-                        </header>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="page-related-news-detail">
-                            <figure>
-                                <img src="image/n1.jpg" alt="image">
-                            </figure>
-
-                            <a href="#">
-                                <h1>Jay shree ram</h1>
-                            </a>
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="contact-form">
-                            <h3>Your Opinion</h3>
-                            <form>
-                                <label>Name(Must)</label>
-                                <input type="text" name="name" placeholder="Your name">
-
-
-                                <label>Email(Must)</label>
-                                <input type="email" name="email" placeholder="Your email">
-
-
-                                <label>Feedback </label>
-                                <textarea name="name" placeholder="message"></textarea>
-                                <input type="submit" name="submit">
-                            </form>
+<!--                        <div class="contact-form">-->
+<!--                            <h3>Your Opinion</h3>-->
+<!--                            <div class="fb-comments" data-href="{{request.get_full_path}}"  data-width="100%"  data-numposts="5"></div>-->
+                            <div class="fb-comments" data-href="http://127.0.0.1:8000/{{request.path}}" data-width="100%" data-numposts="5"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="place-for-ads">
-                    <figure>
-                        <img src="image/adv3.jpg">
-                    </figure>
 
-                </div>
-            </div>
         </div>
     </div>
 </div>
+{% endblock %}

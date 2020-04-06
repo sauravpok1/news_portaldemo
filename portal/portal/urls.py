@@ -28,9 +28,14 @@ urlpatterns = [
     path('backend/crud/',include('newsportal.urls')),
 
     path('', views.home, name='home'),
+    path('main_news/', views.main_news, name='main_news'),
     path('category/<slug>', views.category, name='category'),
-    path('news/', views.news, name='news'),
+    path('news/<slug>', views.news, name='news'),
     path('contactus/', views.contactus, name='contactus'),
+    # ajax
+    path('news_category_ajax/', views.news_category, name='news_category_ajax'),
+
+
 
     path('backend/contactus/', include('contactus.urls')),
 
