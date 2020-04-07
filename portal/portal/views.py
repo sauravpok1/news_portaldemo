@@ -116,7 +116,10 @@ def main_news(request):
     return render(request,'frontend/website/main_news.html',context)
 
 
-def news_category(request):
-    username = request.GET.get('desc', None)
-
-    return JsonResponse(username)
+def news_category_ajax(request):
+    
+    description = request.GET.get('desc')
+    data = {
+        'desc': description
+    }
+    return JsonResponse(data)

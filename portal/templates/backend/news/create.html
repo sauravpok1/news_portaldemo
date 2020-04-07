@@ -1,4 +1,41 @@
 {% extends "backend/master/master.html" %}
+
+{% block js %}
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+      $("#title").keyup(function(){
+          var Text = $(this).val();
+          Text = Text.toLowerCase();
+          var regExp = /\s+/g;
+          Text = Text.replace(regExp,'-');
+          $("#slug").val(Text);        
+      });
+
+
+      $("#id_description").change(function(){
+        var desc = $(this).val();
+
+        $.ajax({
+          url: '/news_category_ajax/',
+          data: {
+            'desc': desc,
+          },
+          method: "get",
+          dataType: 'json',
+          success: function (data) {
+            console.log(data);
+          }
+        });
+
+      });
+
+
+    });
+</script>
+{% endblock %}
+
 {% block title %}
 <title>Create of News | Admin Panel</title>
 {% endblock %}
@@ -27,7 +64,7 @@
                 </div>
                  <div class="panel-body" style="padding-bottom:30px;">
                   <div class="col-md-12">
-                    <form action="" method="POST" id="form" novalidate="" enctype="multipart/form-data">
+                    <form action="" method="POST" id="news_form" data-validate-username-url="{% url 'news_category_ajax' %}" novalidate="" enctype="multipart/form-data">
                      {% csrf_token %}
                         {{ form.as_p }}
 
@@ -57,39 +94,5 @@
   <!-- end: content -->
 
 
-
 {% endblock %}
-{% block js %}
 
-<script type="text/javascript">
-    $(document).ready(function(){
-
-      $("#title").keyup(function(){
-          var Text = $(this).val();
-          Text = Text.toLowerCase();
-          var regExp = /\s+/g;
-          Text = Text.replace(regExp,'-');
-          $("#slug").val(Text);        
-      });
-
-
-      $("#id_description").change(function(){
-        var desc = $(this).val();
-
-        $.ajax({
-        url: '{% url "news_category_ajax" %}',
-        data: {
-          'desc': desc
-        },
-        dataType: 'json',
-        success: function (data) {
-          console.log(data);
-        }
-      });
-
-      });
-
-
-    });
-</script>
-{% endblock %}

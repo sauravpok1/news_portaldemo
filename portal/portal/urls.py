@@ -33,7 +33,7 @@ urlpatterns = [
     path('news/<slug>', views.news, name='news'),
     path('contactus/', views.contactus, name='contactus'),
     # ajax
-    path('news_category_ajax/', views.news_category, name='news_category_ajax'),
+    path('news_category_ajax/', views.news_category_ajax, name='news_category_ajax'),
 
 
 
