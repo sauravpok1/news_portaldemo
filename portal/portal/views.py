@@ -7,11 +7,9 @@ from newsportal.models import Category, News
 from contactus.forms import contactForm
 # imports here!!
 import pandas as pd
-import spacy
-from tqdm import tqdm_notebook
-
-tqdm_notebook().pandas()
-
+import nltk as nltk
+from nltk.stem import PorterStemmer
+from nltk.corpus import stopwords
 
 
 def signin(request):
@@ -127,11 +125,38 @@ def news_category_ajax(request):
     description = request.GET.get('desc')
 
     # news portal algotrithm
+    # CONVERTING INTO LOWERCASE:
+    variable_name = description.lower()
+
+    # TOKENIZATION:
+
+    tokens = nltk.word_tokenize(variable_name)
+    token_words = [w for w in tokens if w.isalpha()]
+
+
+    # STEMMING:
+    stemming = nltk.PorterStemmer()
+    stemmed_list = [stemming.stem(word) for word in token_words]
+
+
+    #STOPWORDS:
+    stops = set(stopwords.words("english"))
+    meaningful_words = [w for w in stemmed_list if not w in stops]
+
+    
+
+    # REJOIN  WORDS:
+    joined_words = (" ".join(meaningful_words))
+    print(joined_words)
+
+
+
+
 
 
 
     data = {
-        'desc': description,
+        'desc': joined_words,
         'return':'from server'
     }
     return JsonResponse(data)
