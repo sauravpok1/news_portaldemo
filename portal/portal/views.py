@@ -5,6 +5,13 @@ from django.shortcuts import render, redirect
 from newsportal.models import Category, News
 
 from contactus.forms import contactForm
+# imports here!!
+import pandas as pd
+import spacy
+from tqdm import tqdm_notebook
+
+tqdm_notebook().pandas()
+
 
 
 def signin(request):
@@ -117,9 +124,14 @@ def main_news(request):
 
 
 def news_category_ajax(request):
-    
     description = request.GET.get('desc')
+
+    # news portal algotrithm
+
+
+
     data = {
-        'desc': description
+        'desc': description,
+        'return':'from server'
     }
     return JsonResponse(data)
