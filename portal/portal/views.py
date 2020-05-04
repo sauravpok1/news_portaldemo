@@ -42,7 +42,7 @@ def home(request):
     mains= main_news[1:3]
 
     cat1_news = News.objects.filter(category_id=menus.first().id, status=1).order_by('-created_date')[:3]
-    cat2_news = News.objects.filter(category_id=menus[1].id, status=1).order_by('-created_date')[:2]
+    cat2_news = News.objects.filter(category_id=menus[1].id, status=1).order_by('-created_date')[:1]
     cat3_news = News.objects.filter(category_id=menus[2].id, status=1).order_by('-created_date')[:5]
     cat4_news = News.objects.filter(category_id=menus[3].id, status=1).order_by('-created_date')[:4]
     head_list = {
@@ -56,6 +56,7 @@ def home(request):
         'slug4': menus[3].slug,
         'title5': menus[4].title,
         'slug5': menus[4].slug,
+
     }
 
     context = {
@@ -68,6 +69,7 @@ def home(request):
         'cat2_news': cat2_news,
         'cat3_news':cat3_news,
         'cat4_news': cat4_news,
+
 
     }
     return render(request,'frontend/website/index.html',context)

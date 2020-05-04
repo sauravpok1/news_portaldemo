@@ -47,7 +47,14 @@
                             <td>{{category.title}}</td>
                             <td>{{category.slug}}</td>
                             <td>{{category.rank}}</td>
-                            <td>{{category.menu_display}}</td>
+                             <td>
+                              {%if category.menu_display == 1 %}
+                              <span class="label label-success">Active</span>
+                              {% else %}
+                              <span class="label label-warning">De Active</span>
+                              {% endif %}
+
+                            </td>
 
                             <td>
                               {%if category.status == 1 %}

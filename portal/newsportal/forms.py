@@ -10,13 +10,13 @@ class CategoryForm(forms.ModelForm):
 
     class Meta:
             model = Category
-            fields = ['title','slug','rank','description','status' ]
+            fields = ['title','slug','rank','description','menu_display','status' ]
             # fields = '_all_'
 
 class NewsForm(forms.ModelForm):
     category = forms.ModelChoiceField(widget=forms.Select(attrs={'class': 'form-control'}),queryset=Category.objects.all())
-    title = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter Title'}))
-    slug = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','placeholder':'slug'}))
+    title = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control','id':'title', 'placeholder': 'Enter Title'}))
+    slug = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','id':'slug','placeholder':'slug'}))
     rank = forms.CharField(widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Enter Rank'}))
     image_title = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter Title of Image'}))
     description = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder': ' Description Here'}))

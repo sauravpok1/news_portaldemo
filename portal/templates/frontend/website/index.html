@@ -20,7 +20,7 @@
 
                     <section class="main-news-entry">
                         <article class="main-news-big-content">
-                            <a href="#">
+                            <a href="{% url 'news' main1.slug %}">
                                 <h1>{{main1.title}}&nbsp;</h1>
                                 <figure>
                                    {% if main1.image %}
@@ -91,7 +91,7 @@
                             {% for cat1 in cat1_news %}
                             <div class="col-md-4">
                                 <article class="international-news-big-content">
-                                    <a href="#">
+                                    <a href="{% url 'news' cat1.slug %}">
                                         <h1>{{cat1.title}}</h1>
                                         <figure>
                                              {% if cat1.image %}
@@ -116,7 +116,7 @@
     </div>
 </div>
 
-<!-- business news -->
+<!-- Health news -->
 <div class="fl-mixed-business-wrapper">
     <div class="container">
         <div class="row">
@@ -134,14 +134,14 @@
                     <div class="mixed-business-content">
                         <div class="row">
                             {% for cat2 in cat2_news %}
-                            <div class="col-md-3">
+                            <div class="col-md-4.5">
                                 <div class="mixed-business-big">
                                     <figure>
-                                        <img src="{{MEDIA_URL}}{{cat2.image.url}}" alt="image">
+                                        <img src="{{MEDIA_URL}}{{cat2.image.url}}" alt="image" width="100%">
                                     </figure>
-                                    <div class="economic-content">
-                                        <a href="#"><h1>{{ cat2.title }}</h1></a>
-                                        <p>{{ cat2.description }}</p>
+                                    <div class="health-content">
+                                        <a href="{% url 'news' cat2.slug %}"><h1>{{ cat2.title}}</h1></a>
+<!--                                        <p>{{ cat2.description }}</p>-->
                                     </div>
 
                                 </div>
@@ -169,7 +169,7 @@
                                     {% for cat3 in cat3_news %}
                                     <li>
                                         <div class="country-news-content">
-                                            <a href="#">
+                                            <a href="{% url 'news' cat3.slug %}">
                                                 <h4> {{cat3.title}} </h4>
                                             </a>
                                         </div>
@@ -188,11 +188,11 @@
 
 
 
-<!--health and Lifestyle news-->
+<!--Technology news-->
 <div class="fl-health-news-wrapper">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+                        <div class="col-md-12">
                 <div class="health-news-content">
                     <header class="news-header">
                         <h2>
@@ -205,20 +205,19 @@
 
                     <div class="health-news-slider">
                         <div class="owl-carousel owl-theme type1">
+                        {% for news5 in cat4_news %}
                             <div class="item">
-                                 {% for cat4 in cat4_news %}
                                 <div class="health-news-detail">
                                     <figure>
-                                        <img src="{{MEDIA_URL}}{{cat4.image.url}}" alt="image">
+                                        <img src="{{MEDIA_URL}}{{news5.image.url}}" alt="image">
                                     </figure>
 
-                                    <a href="#">
-                                        <h1>{{cat4.title}}</h1>
+                                    <a href="{% url 'news' news5.slug %}">
+                                        <h1>{{news5.title}}</h1>
                                     </a>
                                 </div>
-                                {% endfor %}
                             </div>
-
+                        {% endfor %}
                         </div>
                     </div>
                 </div>

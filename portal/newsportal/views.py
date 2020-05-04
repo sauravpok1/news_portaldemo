@@ -5,11 +5,6 @@ from .forms import CategoryForm, NewsForm
 from .models import Category, News
 
 
-
-
-# Create your views here.
-
-
 @login_required(login_url='signin')
 def create_category(request):
     form= CategoryForm(request.POST or None,request.FILES or None)
@@ -84,6 +79,8 @@ def create_news(request):
     }
     return render(request, 'backend/news/create.html', context)
 
+
+
 @login_required(login_url='signin')
 def edit_news(request, id):
     data = News.objects.get(pk=id)
@@ -97,6 +94,8 @@ def edit_news(request, id):
 
     }
     return render(request, 'backend/news/edit.html', context)
+
+
 
 @login_required(login_url='signin')
 def delete_news(request, id):

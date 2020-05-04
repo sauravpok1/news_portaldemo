@@ -27,7 +27,7 @@
                 </div>
                  <div class="panel-body" style="padding-bottom:30px;">
                   <div class="col-md-12">
-                    <form action="" method="POST" id="form" novalidate="">
+                    <form action="" method="POST" id="form" novalidate="" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{forms.as_p}}
                       
