@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
+from django.core.paginator import Paginator, EmptyPage, InvalidPage
 from newsportal.models import Category, News
 
 from contactus.forms import contactForm
@@ -73,18 +74,35 @@ def home(request):
 
     }
     return render(request,'frontend/website/index.html',context)
+
+
 def category(request,slug):
     menus = Category.objects.filter(status=1)
     cat = Category.objects.get(slug=slug)
     news_as_per_category = News.objects.filter(category_id=cat.id, status=1)
 
+    paginator = Paginator(news_as_per_category, 3)
+
+    try:
+        page = int(request.GET.get('page'))
+    except:
+        page = 1
+
+    try:
+        posts = paginator.page(page)
+    except(EmptyPage, InvalidPage):
+        posts = paginator.page(paginator.num_pages)
+
     context = {
         'menus': menus,
         'news':news_as_per_category,
         'cat':cat,
+        'posts':posts,
     }
 
     return render(request,'frontend/website/list.html',context)
+
+
 def news(request,slug):
     menus = Category.objects.filter(status=1)
     news = News.objects.get(slug=slug)
@@ -95,6 +113,8 @@ def news(request,slug):
         'news': news,
     }
     return render(request,'frontend/website/second.html',context)
+
+
 def contactus(request):
     menus = Category.objects.filter(status=1)
     form=contactForm(request.POST or None, request.FILES or None)

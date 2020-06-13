@@ -3,10 +3,7 @@ from django import forms
 
 # Create your models here.
 class contactus(models.Model):
-    name = models.CharField(
-        verbose_name="Name",
-        max_length=200
-        )
+    name = models.CharField(verbose_name="Name",max_length=200)
     email = models.EmailField(
         verbose_name="Email address",
         unique=True
