@@ -8,9 +8,17 @@ from newsportal.models import Category, News
 from contactus.forms import contactForm
 # imports here!!
 import pandas as pd
+import numpy as np
 import nltk as nltk
+# nltk.download ('all')
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
+from sklearn import model_selection,svm
+from sklearn.preprocessing import LabelEncoder
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics import accuracy_score
+from sklearn.utils import shuffle
+from sklearn.model_selection import train_test_split
 
 
 def signin(request):
@@ -144,32 +152,97 @@ def main_news(request):
 
 
 def news_category_ajax(request):
-    description = request.GET.get('desc')
 
+    descr = request.GET['desc']
+    print(descr)
+    filterationss = categorization(descr)
+
+
+    data = {
+        'Prediction': filterationss,
+        'return': 'from server'
+    }
+    opt = "<option>----</option>"
+    category =  Category.objects.all()
+    for cat in category:
+        if(cat.filteration == str(data['Prediction']) ):
+            opt = opt + "<option value='" + str(cat.id) + "' selected>" + cat.title + "</option>"
+        else:
+         opt = opt+"<option value='"+str(cat.id)+"'>"+cat.title+"</option>"
+    # print(opt)
+    print(str(data['Prediction']))
+    return JsonResponse({'data':opt})
+
+
+    # news portal algotrithm
+
+def filteration(description):
     # news portal algotrithm
     # CONVERTING INTO LOWERCASE:
     variable_name = description.lower()
 
-    # TOKENIZATION:
-
+    # TOKENIZATION\
     tokens = nltk.word_tokenize(variable_name)
     token_words = [w for w in tokens if w.isalpha()]
 
+    # STOPWORDS:
+    stops = set(stopwords.words("english"))
+    meaningful_words = [w for w in token_words if not w in stops]
 
     # STEMMING:
     stemming = nltk.PorterStemmer()
-    stemmed_list = [stemming.stem(word) for word in token_words]
-
-
-    #STOPWORDS:
-    stops = set(stopwords.words("english"))
-    meaningful_words = [w for w in stemmed_list if not w in stops]
-
-    
+    stemmed_list = [stemming.stem(word) for word in meaningful_words]
 
     # REJOIN  WORDS:
-    joined_words = (" ".join(meaningful_words))
-    print(joined_words)
+    joined_words = (",".join(stemmed_list))
+
+    return joined_words
+
+
+
+def categorization( description_text,):
+    data = {'user_data': [description_text]
+            }
+    decription_dataset = pd.DataFrame(data, columns=['user_data'])
+    decription_dataset['user_data'] = decription_dataset['user_data'].apply(filteration)
+    # print(len(text_dataset['datas'][0].split(',',100000)))
+    # ONLY FOR LRNGTH
+    # print('2')
+    description_filtered = filteration(description_text)
+    description_filtered_string = str(description_filtered)
+    description_filtered_list = description_filtered_string.split(',', 100000)
+    description_filtered_list_length = len(description_filtered_list)
+    # print(len(desc))
+
+    Tfidf_length = TfidfVectorizer(encoding='utf-8', max_features=description_filtered_list_length)
+    data_length = Tfidf_length.fit_transform(decription_dataset['user_data']).toarray()  # [1,[X]]
+    length_max_features = len(data_length[0])
+
+    corpus = pd.read_csv("newsportal/dataset/train_test_data.csv")
+
+
+    # TEST_TRAIN_DATA
+    X_train, X_test, Y_train, Y_test = train_test_split(corpus['filtered_description'], corpus['label'], test_size=0.2)
+
+    # TFIDF of TEST_TRAIN data
+    Tfidf = TfidfVectorizer(encoding='utf-8', max_features=length_max_features)
+    Train_X_Tfidf = Tfidf.fit_transform(X_train).toarray()
+    Test_X_Tfidf = Tfidf.transform(X_test).toarray()
+    # TFIDF of descr
+    Tfidf_descr = TfidfVectorizer(encoding='utf-8', max_features=length_max_features)
+
+    descrption_Tfidf = Tfidf_descr.fit_transform(decription_dataset['user_data']).toarray()  # [1,[X]]
+
+    # print(len(descr_Tfidf))
+
+    # SVM algorithm part
+    SVM = svm.SVC(C=1.0, kernel='linear', degree=3, gamma='auto')
+    SVM.fit(Train_X_Tfidf, Y_train)
+    predictions_SVM = SVM.predict(descrption_Tfidf)
+    prediction_SVM = SVM.predict(Test_X_Tfidf)
+    print("SVM Accuracy Score -> ", accuracy_score(prediction_SVM, Y_test) * 100)
+
+    return predictions_SVM
 
 
 
@@ -177,8 +250,5 @@ def news_category_ajax(request):
 
 
 
-    data = {
-        'desc': joined_words,
-        'return':'from server'
-    }
-    return JsonResponse(data)
+
+

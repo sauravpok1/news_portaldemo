@@ -48,8 +48,11 @@ def edit_category(request, id, ):
 @login_required(login_url='signin')
 def delete_category(request, id):
     category = Category.objects.get(id=id)
-    category.delete()
-    messages.add_message(request,messages.SUCCESS,"Category Deleted Successfully")
+    try:
+        category.delete()
+        messages.add_message(request, messages.SUCCESS, "Category Deleted Successfully")
+    except:
+        messages.add_message(request, messages.ERROR, "Category Cannot be Deleted .TRY DELETE ITS NEWS CONTENT FIRST")
 
     return redirect('list_category')
 

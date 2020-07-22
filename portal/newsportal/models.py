@@ -28,7 +28,7 @@ class News(models.Model):
     view_count = models.IntegerField(default=0, null=True, blank=True)
     main_news = models.BooleanField(default=True)
     slider_key = models.BooleanField(default=True)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.PROTECT)
 
     description = models.TextField(null=True, blank=True)
     created_date = models.DateTimeField(auto_now=True)

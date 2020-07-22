@@ -23,9 +23,10 @@
             'desc': desc,
           },
           method: "get",
-          dataType: 'json',
-          success: function (data) {
-            console.log(data);
+          success: function (resp) {
+            console.log(resp['data']);
+               $('#id_category').empty();
+               $('#id_category').append(resp['data']);
           }
         });
 

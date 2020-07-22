@@ -6,6 +6,7 @@ class Cat(models.Model):
     rank=models.IntegerField(default=1)
     status = models.BooleanField(default=True)
     menu_display = models.BooleanField(default=True)
+    filteration = models.CharField(max_length=100)
 
     class Meta:
         abstract=True
