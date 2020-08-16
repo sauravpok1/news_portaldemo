@@ -4,8 +4,10 @@ from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.core.paginator import Paginator, EmptyPage, InvalidPage
 from newsportal.models import Category, News
-
+from django.contrib.auth.models import User
+from contactus.models import contactus
 from contactus.forms import contactForm
+from django.db.models import Count
 # imports here!!
 import pandas as pd
 import numpy as np
@@ -13,6 +15,7 @@ import nltk as nltk
 # nltk.download ('all')
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
+from pip._vendor import requests
 from sklearn import model_selection,svm
 from sklearn.preprocessing import LabelEncoder
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -35,9 +38,36 @@ def signin(request):
             messages.add_message(request,messages.ERROR,"Username or Password doesn't match")
             return redirect('signin')
 
-# login requ
+
+
 def dashboard(request):
-    return render(request,'backend/dashboard.html')
+    # no_user = User.objects.filter(is_active=True).aggregate(Count('id'))
+    category = Category.objects.all().aggregate(Count('id'))
+    print(category['id__count'])
+    news = News.objects.all().aggregate(Count('id'))
+    # no_message =contactus.objects.filter(status=False).all()
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=47bfe14abddce5050e694cabd6db30ed'
+    city = 'kathmandu'
+    city_weather = requests.get(url.format(city)).json()
+    temperature = round((city_weather['main']['feels_like'] - 32) * 5 / 9, 2)
+    max_temp = round((city_weather['main']['temp_max'] - 32) * 5 / 9, 2)
+    # request the API data and convert the JSON to Python data types
+    weather = {
+        'city': city,
+        'temperature': temperature,
+        'max_temp': max_temp,
+        'min_temp': round(temperature * 2 - max_temp, 2),
+        'description': city_weather['weather'][0]['description'],
+        'icon': city_weather['weather'][0]['icon']
+    }
+
+    context = {
+        'category':category['id__count'],
+        'news':news['id__count'],
+        # 'no_message': no_message,
+        'weather': weather,
+    }
+    return render(request,'backend/dashboard.html',context)
 
 
 def signout(request):
@@ -154,21 +184,30 @@ def main_news(request):
 def news_category_ajax(request):
 
     descr = request.GET['desc']
-    print(descr)
-    filterationss = categorization(descr)
+    category = Category.objects.all()
 
+    print(descr)
+    try:
+        filterationss = categorization(descr)
+    except:
+        opt = "<option selected>--Invalid Description To Filter--</option>"
+        for cat in category:
+            opt = opt + "<option value='" + str(cat.id) + "'>" + cat.title + "</option>"
+        return JsonResponse({'data': opt})
 
     data = {
         'Prediction': filterationss,
         'return': 'from server'
     }
     opt = "<option>----</option>"
-    category =  Category.objects.all()
+
     for cat in category:
         if(cat.filteration == str(data['Prediction']) ):
             opt = opt + "<option value='" + str(cat.id) + "' selected>" + cat.title + "</option>"
         else:
          opt = opt+"<option value='"+str(cat.id)+"'>"+cat.title+"</option>"
+
+
     # print(opt)
     print(str(data['Prediction']))
     return JsonResponse({'data':opt})
@@ -198,6 +237,13 @@ def filteration(description):
 
     return joined_words
 
+def data_split(df):
+
+  Description = np.array(df['Description'].values.astype('U'))
+  Label = np.array(df['Label'].values.astype('U'))
+
+  return Description,Label
+
 
 
 def categorization( description_text,):
@@ -211,6 +257,10 @@ def categorization( description_text,):
     description_filtered = filteration(description_text)
     description_filtered_string = str(description_filtered)
     description_filtered_list = description_filtered_string.split(',', 100000)
+    # list2 = []
+    # list2.append(descr)
+    # # print(list2)
+    # desc = pd.DataFrame(descr)
     description_filtered_list_length = len(description_filtered_list)
     # print(len(desc))
 
@@ -219,6 +269,7 @@ def categorization( description_text,):
     length_max_features = len(data_length[0])
 
     corpus = pd.read_csv("newsportal/dataset/train_test_data.csv")
+    corpus = shuffle(corpus)
 
 
     # TEST_TRAIN_DATA
@@ -243,6 +294,7 @@ def categorization( description_text,):
     print("SVM Accuracy Score -> ", accuracy_score(prediction_SVM, Y_test) * 100)
 
     return predictions_SVM
+
 
 
 

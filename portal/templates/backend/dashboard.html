@@ -1,1 +1,106 @@
 {% extends 'backend/master/master.html' %}
+
+{% block title %}
+<title>Dashboard | Admin Panel</title>
+{% endblock %}
+{% block content %}
+<!-- start: Content -->
+<div id="content">
+        <div class="panel">
+          <div class="panel-body">
+              <div class="col-md-6 col-sm-12">
+                <h3 class="animated fadeInLeft">Dashboard</h3>
+                  <h1 style="color:#07177d;"><i class="fa fa-clock-o"></i>  {% now " H:i" %}</h1>
+                <p class="animated fadeInDown"><span class="fa  fa-map-marker"></span> {{ weather.city }}</p>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="col-md-6 col-sm-6 text-right" style="padding-left:10px;">
+                  <h3 style="color:#07177d;"><span class="fa  fa-map-marker"></span> {{ weather.city }}</h3>
+                  <h1 style="margin-top: -10px;color: #07177d;">{{ weather.temperature }}° C</h1>
+                  <h5 style="color:#07177d;">{{ weather.min_temp }}° C<span> to </span> {{ weather.max_temp }}° C</h5>
+
+                </div>
+                <div class="col-md-6 col-sm-6">
+                   <div class="wheather">
+                    <div class="stormy rainy animated pulse infinite">
+                      <div class="shadow">
+
+                      </div>
+                    </div>
+                    <div class="sub-wheather">
+                      <figure class="image is-50x50">
+                          <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image">
+                          <br><hr>
+                          <h5 style="color:#07177d;">{{ weather.description }}</h5>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+<!-- head part end -->
+        <div class="col-md-12" style="padding:20px;">
+          <div class="col-md-12 padding-0">
+              <div class="col-md-12 padding-0">
+                  <div class="col-md-12 padding-0">
+                      <div class="col-md-6">
+                          <div class="panel box-v1">
+                            <div class="panel-heading bg-primary border-none">
+                              <div class="col-md-6 col-sm-6 col-xs-6 text-left padding-0">
+                                <h4 class="text-left">
+                                    <span class="fa fa-user"></span> Category
+                                  </h4>
+                              </div>
+                              <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                                 <h4>
+
+                                 </h4>
+                              </div>
+                            </div>
+                            <div class="panel-body text-center">
+                              <a href="{% url 'list_category' %}">
+                                <h1>{{category}}</h1>
+                                <p>Categories</p>
+                              </a>
+                              <hr>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="panel box-v1">
+                            <div class="panel-heading bg-white border-none">
+                              <div class="col-md-6 col-sm-6 col-xs-6 text-left padding-0">
+                                <h4 class="text-left">
+                                    <span class="fa fa-envelope-o"></span>  News
+                                </h4>
+                              </div>
+                              <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                                 <h4>
+                                 <span class="icon-basket-loaded icons icon text-right"></span>
+                                 </h4>
+                              </div>
+                            </div>
+                            <div class="panel-body text-center">
+                              <a href="{% url 'list_news' %}">
+                                <h1>{{news}}</h1>
+                                <p>News</p>
+                              <hr>
+                              </a>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+
+
+      </div>
+
+
+
+    </div>
+  <!-- end: content -->
+
+{% endblock %}
